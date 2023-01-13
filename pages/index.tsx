@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
+import imagePreview from "../assets/Air jordan 1 Mid Chicago.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +14,46 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen w-full">
-        <h1>Hello world</h1>
+      <main className="h-screen w-full bg-zinc-900" id="home">
+        <div
+          className="absolute bottom-0 z-0 flex h-[80vh] w-full items-center justify-end p-4"
+          id="background_preview"
+        >
+          <p className="text-9xl font-bold tracking-widest text-white/10">
+            NIKE ADIDAS
+          </p>
+        </div>
+        <div
+          className="absolute -mx-[10%] flex h-screen w-full items-center justify-end"
+          id="image_preview"
+        >
+          <Image
+            src={imagePreview}
+            alt="image preview"
+            className="mt-16 -rotate-[15deg]"
+          />
+        </div>
+        <div
+          className="absolute ml-28 flex h-screen w-auto flex-col justify-center"
+          id="image_description"
+        >
+          <div className="w-[350px] space-y-2">
+            <p className="text-6xl font-medium text-red-600">AIR JORDAN</p>
+            <p className="text-5xl font-medium text-red-600">1 MID CHICAGO</p>
+          </div>
+          <p className="my-10 w-[350px] text-justify text-base text-gray-200 backdrop-blur-sm">
+            The Air Jordan 1 Mid 'Chicago Black Toe' draws inspiration from the
+            sneaker's 1985 roots. The distinctive color blocking is reminiscent
+            of the OG 'Chicago' colorway, applied to a mid-top silhouette and
+            revised with a black finish on the perforated toe box.
+          </p>
+          <button
+            type="submit"
+            className="w-2/4 rounded-md border-2 border-red-600 px-6 py-2 hover:bg-red-600 active:bg-black"
+          >
+            <p className="text-2xl text-white">Buy Now</p>
+          </button>
+        </div>
       </main>
     </>
   );
