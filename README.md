@@ -1,6 +1,6 @@
-<h1 style="color:yellow;">
+```diff
 ! Website under development
-</h1>
+```
 
 # Project shoes store
 
