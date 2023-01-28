@@ -116,7 +116,7 @@ export function Product({ products }) {
         {products.map((product) => (
           <div
             key={product.id}
-            className="relative float-left flex-col overflow-hidden text-ellipsis rounded-md bg-white p-2 text-sm text-black"
+            className="flex flex-col justify-between overflow-hidden rounded-md bg-white p-2 text-sm text-black"
           >
             <div className="my-2 flex w-full items-center justify-center">
               <Image
@@ -132,8 +132,11 @@ export function Product({ products }) {
               <p className="overflow-hidden text-ellipsis whitespace-nowrap font-light text-gray-500">
                 {product.description}
               </p>
+
+              <button className="mt-2 w-full rounded bg-blue-400 p-1">
+                Buy
+              </button>
             </div>
-            <button className="mt-2 w-full rounded bg-blue-400 p-1">Buy</button>
           </div>
         ))}
       </div>
